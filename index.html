@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Weather Forecast</title>
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- container div. everything on the page goes in here -->
+    <div class="container-fluid">
+        <!-- page header -->
+        <header class="jumbotron jumbotron-fluid row">
+            <div class="container">
+                <h1 class="display-3">Weather Forecast</h1>
+            </div>
+        </header>
+        <!-- website content -->
+        <div class="row">
+            <!-- search bar and history -->
+            <nav class="col-md-4 bg-secondary rounded">
+                <h3>Search For A City:</h3>
+                <!-- search bar -->
+                <div class="input-group input-group-sm mb-3">
+                    <input type="text" class="form-control" id="search-bar">
+                    <div class="search-button input-group-append">
+                        <span class="input-group-text" id="inputGroup-sizing-default">
+                            <!-- search icon -->
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <!-- history buttons -->
+                <div class="col-12" id="history-button-holder">
+                    <button class="btn btn-light col-12 history-button"></button><br>
+                    <button class="btn btn-light col-12 history-button"></button><br>
+                    <button class="btn btn-light col-12 history-button"></button><br>
+                    <button class="btn btn-light col-12 history-button"></button><br>
+                    <button class="btn btn-light col-12 history-button"></button><br>
+                    <button class="btn btn-light col-12 history-button"></button><br>
+                    <button class="btn btn-light col-12 history-button"></button><br>
+                    <button class="btn btn-light col-12 history-button"></button><br>
+                </div>
+            </nav>
+            <!-- current weather and 5 day forecast -->
+            <main class="col-md-8">
+                <div id="main-weather-display" data-day="1">
+                    <h2 id="city-name">City Name (Date)</h2>
+                    <div class="current-info-display">Temperature: <span id="temperature"></span></div>
+                    <div class="current-info-display">Humidity: <span id="humidity"></span></div>
+                    <div class="current-info-display">Wind Speed: <span id="wind-speed"></span></div>
+                    <div class="current-info-display">UV Index: <span id="uv-index"></span></div>
+                </div>
+                <!-- future weather goes here -->
+                <div class="row" id="future-weather-holder">
+
+                </div>
+            </main>
+            
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
