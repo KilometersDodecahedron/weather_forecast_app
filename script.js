@@ -4,7 +4,7 @@ $(document).ready(function(){
     const searchButton = $(".search-button");
     const searchBar = $("#search-bar");
 
-    var apiLink = "http://api.openweathermap.org/data/2.5/forecast?cnt=6&appid=a94f9c1940403092fb3e7511b13587a8";
+    var apiLink = "https://api.openweathermap.org/data/2.5/forecast?cnt=6&appid=a94f9c1940403092fb3e7511b13587a8";
     
     //default values
     var cityHistoryArray = ["Austin", "Chicago", "New York", "Orlando", "San Francisco", "Seattle", "Denver", "Atlanta"];
@@ -50,11 +50,11 @@ $(document).ready(function(){
         
             //sets the name of the city, then adds the icon to the end
             $("#city-name").text(responce.city.name + currentDate);
-            var weatherIcon = $("<img>").attr("id", "weather-icon").attr("src", "http://openweathermap.org/img/wn/" + responce.list[0].weather[0].icon + "@2x.png");
+            var weatherIcon = $("<img>").attr("id", "weather-icon").attr("src", "https://openweathermap.org/img/wn/" + responce.list[0].weather[0].icon + "@2x.png");
             $("#city-name").append(weatherIcon);
             
             //add weather icon
-            $("#weather-icon").attr("src", "http://openweathermap.org/img/wn/" + responce.list[0].weather[0].icon + "@2x.png")
+            $("#weather-icon").attr("src", "https://openweathermap.org/img/wn/" + responce.list[0].weather[0].icon + "@2x.png")
     
             //get current temp
             var temp = responce.list[0].main.temp;
@@ -72,7 +72,7 @@ $(document).ready(function(){
             for(var i = 1; i < 6; i++){
                 var weatherHolderCard = $("<div>").addClass("rounded future-card col-sm-5 col-md-2 bg-primary");
                 var dateDisplay = $("<div>").addClass("future-text future-date").text(moment().add(i, "days").format("MM/DD/YYYY"));
-                var iconDisplay = $("<img>").addClass("future-icon").attr("src", "http://openweathermap.org/img/wn/" + responce.list[i].weather[0].icon + "@2x.png")
+                var iconDisplay = $("<img>").addClass("future-icon").attr("src", "https://openweathermap.org/img/wn/" + responce.list[i].weather[0].icon + "@2x.png")
                 
                 var futureTemp = responce.list[i].main.temp
                 futureTemp = (futureTemp - 273.15) * (9 / 5) + 32;
