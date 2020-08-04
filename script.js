@@ -22,7 +22,7 @@ $(document).ready(function(){
             method: "GET"
         }).then(function(responce){
             //this is all to add the uv index
-            var callUvIndexLink = "https://api.openweathermap.org/data/2.5/uvi?cnt=6&appid=" + apiKey + "&lat=" + responce.city.coord.lat +
+            var callUvIndexLink = "https://api.openweathermap.org/data/2.5/uvi?cnt=6&appid=a94f9c1940403092fb3e7511b13587a8" + "&lat=" + responce.city.coord.lat +
                 "&lon=" + responce.city.coord.lon;
             $.ajax({
                 url: callUvIndexLink,
