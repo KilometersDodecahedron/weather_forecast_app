@@ -3,9 +3,8 @@ $(document).ready(function(){
     const futureWeatherHolder = $("#future-weather-holder");
     const searchButton = $(".search-button");
     const searchBar = $("#search-bar");
-    const apiKey = "a94f9c1940403092fb3e7511b13587a8";
 
-    var apiLink = "http://api.openweathermap.org/data/2.5/forecast?cnt=6&appid=" + apiKey;
+    var apiLink = "http://api.openweathermap.org/data/2.5/forecast?cnt=6&appid=a94f9c1940403092fb3e7511b13587a8";
     
     //default values
     var cityHistoryArray = ["Austin", "Chicago", "New York", "Orlando", "San Francisco", "Seattle", "Denver", "Atlanta"];
